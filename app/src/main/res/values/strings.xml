@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">AndroidDemos</string>
+    <string name="app_name">ViewBinding Demo</string>
+    <string name="hello_world">Hello World!</string>
+    <string name="click_me">Click Me!</string>
 </resources>
