@@ -1,6 +1,8 @@
-# Android Demos
+# ViewBinding Demo
 
-This repo contains actual implementation for everything
-in the [Android app development guides](https://developer.android.com/guide)
+This branch contains example implementation for the [View Binding](https://developer.android.com/topic/libraries/view-binding) guide in the Android Documentation.
 
-This branch contains code for the empty app that will be used to implement features.
+There is a `MainActivity` which links to `ExampleActivity` and `ExampleFragment`
+
+- `ExampleActivity` contains an example on how to use view binding in an activity
+- `ExampleFragment` is an activity that embeds `Fragment1` as a view binding example for fragments

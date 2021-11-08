@@ -1,8 +1,8 @@
 package com.github.gouravkhunger.androiddemos
 
-import android.os.Bundle
-import android.widget.Toast
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 import com.github.gouravkhunger.androiddemos.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -13,25 +13,15 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Inflate the xml file by calling inflate() and passing in
-        // the layout inflater from the Activity class
         binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        // Get the root view and set it as the content to be displayed
-        val rootView = binding.root
-        setContentView(rootView)
-
-        // Access an element from the binding
-        binding.clickMeButton.setOnClickListener {
-            Toast.makeText(this, "Button clicked!", Toast.LENGTH_SHORT).show()
-        }
-
-        // Access multiple elements without excessively typing binding.<view>
         binding.apply {
-            helloWorld.text = helloWorld.text.toString()
-            clickMeButton.setOnLongClickListener {
-                Toast.makeText(this@MainActivity, "Long click!", Toast.LENGTH_SHORT).show()
-                true
+            viewBindignInActivity.setOnClickListener {
+                startActivity(Intent(this@MainActivity, ExampleActivity::class.java))
+            }
+            viewBindingInFragment.setOnClickListener {
+                startActivity(Intent(this@MainActivity, ExampleFragment::class.java))
             }
         }
     }

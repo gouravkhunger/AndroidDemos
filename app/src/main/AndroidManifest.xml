@@ -11,13 +11,19 @@
         android:theme="@style/Theme.AndroidDemos">
         <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ExampleActivity"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".ExampleFragment"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>
